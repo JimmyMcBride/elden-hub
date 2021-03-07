@@ -22,7 +22,7 @@
       v-model="leftDrawerOpen"
       show-if-above
       :width="300"
-      :breakpoint="830"
+      :breakpoint="1220"
     >
       <q-scroll-area
         style="
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-import { date } from "quasar";
+import { date } from "quasar"
 
 export default {
   name: "MainLayout",
@@ -99,15 +99,15 @@ export default {
     return {
       leftDrawerOpen: false,
       // essentialLinks: linksData,
-    };
+    }
   },
   computed: {
     todaysDate() {
-      const timeStamp = Date.now();
-      return date.formatDate(timeStamp, "dddd D MMMM, YYYY");
+      const timeStamp = Date.now()
+      return date.formatDate(timeStamp, "dddd D MMMM, YYYY")
     },
   },
-};
+}
 </script>
 
 <style lang="scss">

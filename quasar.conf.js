@@ -64,7 +64,7 @@ module.exports = function (/* ctx */) {
           test: /\.(js|vue)$/,
           loader: "eslint-loader",
           exclude: /node_modules/,
-        });
+        })
       },
     },
 
@@ -187,5 +187,5 @@ module.exports = function (/* ctx */) {
         // chainWebpack also available besides this extendWebpack
       },
     },
-  };
-};
+  }
+}
