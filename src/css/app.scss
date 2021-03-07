@@ -1,0 +1,39 @@
+// app global css in SCSS form
+@font-face {
+  font-family: cinzel-black;
+  src: url(./fonts/CinzelDecorative-Black.ttf);
+}
+@font-face {
+  font-family: cinzel-bold;
+  src: url(./fonts/CinzelDecorative-Bold.ttf);
+}
+@font-face {
+  font-family: cinzel-regular;
+  src: url(./fonts/CinzelDecorative-Regular.ttf);
+}
+@font-face {
+  font-family: dosis;
+  src: url(./fonts/NotoSansSC-Regular.otf);
+}
+
+// declare a class which applies it
+* {
+  font-family: "dosis";
+}
+.cinz-black {
+  font-family: "cinzel-black";
+}
+.cinz-bold {
+  font-family: "cinzel-bold";
+}
+.cinz-reg {
+  font-family: "cinzel-regular";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
