@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "production": "elden-hub",
+    "default": "elden-hub"
+  }
+}

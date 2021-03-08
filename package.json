@@ -6,11 +6,13 @@
   "author": "JimmyMcBride <mcbride967@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev -m ssr",
-    "build": "quasar build -m ssr",
+    "dev": "quasar dev",
+    "dev:ssr": "quasar dev -m ssr",
+    "build": "quasar build",
+    "build:ssr": "quasar build -m ssr",
+    "serve": "quasar serve",
     "build:pwa": "quasar build -m pwa",
-    "heroku-postbuild": "yarn build && cd dist/ssr && yarn",
-    "start": "cd dist/ssr && yarn start",
+    "deploy": "yarn build && firebase deploy",
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },

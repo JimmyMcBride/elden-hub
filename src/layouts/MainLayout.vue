@@ -68,10 +68,16 @@
 
       <q-img
         class="absolute-top"
-        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FqToATWfBr5bcg9pN4dKktm-1200-80.jpg&f=1&nofb=1"
+        src="~assets/brokenking.jpeg"
         style="height: 192px"
       >
         <div class="absolute-bottom bg-transparent">
+          <q-btn color="primary" class="q-ma-md" @click="alert = true"
+            >Login/Sign Up</q-btn
+          >
+          <q-dialog v-model="alert">
+            <auth-modal />
+          </q-dialog>
           <div class="bg-gray-1">
             <q-avatar size="56px" class="q-mb-sm">
               <q-img src="~assets/wooper.png" />
@@ -91,13 +97,15 @@
 
 <script>
 import { date } from "quasar"
+import AuthModal from "components/AuthModal"
 
 export default {
   name: "MainLayout",
-  // components: { EssentialLink },
+  components: { AuthModal },
   data() {
     return {
       leftDrawerOpen: false,
+      alert: false,
       // essentialLinks: linksData,
     }
   },
