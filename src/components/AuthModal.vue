@@ -1,34 +1,47 @@
 <template>
-  <q-card>
-    <q-card-section>
-      <div class="text-h6">Alert</div>
-    </q-card-section>
+  <q-card style="width: 20rem">
+    <q-tabs
+      v-model="tab"
+      dense
+      class="text-grey q-pa-sm"
+      active-color="primary"
+      indicator-color="primary"
+      align="justify"
+      narrow-indicator
+    >
+      <q-tab name="login" label="Login"></q-tab>
+      <q-tab name="register" label="Register"></q-tab>
+    </q-tabs>
 
-    <q-card-section class="q-pt-none">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus
-      sit voluptate voluptas eveniet porro. Rerum blanditiis perferendis totam,
-      ea at omnis vel numquam exercitationem aut, natus minima, porro labore.
-    </q-card-section>
+    <q-separator></q-separator>
 
-    <q-card-actions align="right">
-      <q-btn flat label="OK" color="primary" v-close-popup />
-    </q-card-actions>
+    <q-tab-panels v-model="tab" animated>
+      <q-tab-panel name="login">
+        <login-register :tab="tab" :modal="modal" />
+      </q-tab-panel>
+
+      <q-tab-panel name="register">
+        <login-register :tab="tab" :modal="modal" />
+      </q-tab-panel>
+    </q-tab-panels>
   </q-card>
 </template>
 
 <script>
+import LoginRegister from "components/LoginRegister"
+
 export default {
   name: "AuthModal",
-  // props: {
-  //   title: {
-  //     type: String,
-  //     required: true,
-  //   },
-
-  //   description: {
-  //     type: String,
-  //     default: "",
-  //   },
+  props: ["modal"],
+  components: {
+    LoginRegister,
+  },
+  data() {
+    return {
+      tab: "login",
+    }
+  },
+  // computed: {
   // },
 }
 </script>

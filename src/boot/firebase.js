@@ -15,8 +15,10 @@ var firebaseConfig = {
   appId: process.env.appId,
 }
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig)
-const firebaseAuth = firebase.auth()
-const firestore = firebase.firestore()
+const firebaseApp = !firebase.apps.length
+  ? firebase.initializeApp(firebaseConfig)
+  : firebase.app()
+const firebaseAuth = firebaseApp.auth()
+const firestore = firebaseApp.firestore()
 
-export { firebaseAuth, firestore }
+export { firebaseAuth, firestore, firebase }

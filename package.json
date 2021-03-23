@@ -6,10 +6,8 @@
   "author": "JimmyMcBride <mcbride967@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "quasar dev",
-    "dev:ssr": "quasar dev -m ssr",
-    "build": "quasar build",
-    "build:ssr": "quasar build -m ssr",
+    "dev": "quasar dev -m spa",
+    "build": "quasar build -m spa",
     "serve": "quasar serve",
     "build:pwa": "quasar build -m pwa",
     "deploy": "yarn build && firebase deploy",
@@ -17,21 +15,35 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@aws-amplify/ui-vue": "^1.0.4",
     "@quasar/extras": "^1.0.0",
+    "aws-amplify": "^3.3.23",
+    "aws-amplify-vue": "^2.1.5",
+    "aws-appsync": "^4.0.3",
     "axios": "^0.18.1",
     "core-js": "^3.6.5",
     "firebase": "^8.2.10",
-    "quasar": "^1.0.0"
+    "firebase-admin": "^9.5.0",
+    "firebase-functions": "^3.13.2",
+    "graphql": "^15.5.0",
+    "graphql-tag": "^2.11.0",
+    "quasar": "^1.0.0",
+    "serverless-http": "^2.7.0",
+    "vue-apollo": "^3.0.7"
   },
   "devDependencies": {
     "@quasar/app": "^2.0.0",
     "@quasar/quasar-app-extension-dotenv": "^1.1.0",
     "babel-eslint": "^10.0.1",
+    "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.9.0",
     "eslint-loader": "^3.0.3",
     "eslint-plugin-vue": "^6.1.2",
-    "prettier": "^2.2.1"
+    "jsdoc": "^3.6.6",
+    "prettier": "^2.2.1",
+    "serverless": "^2.29.0",
+    "serverless-apigw-binary": "^0.4.4"
   },
   "browserslist": [
     "last 10 Chrome versions",
@@ -45,7 +57,7 @@
     "last 5 Opera versions"
   ],
   "engines": {
-    "node": ">= 10.18.1",
+    "node": "14",
     "npm": ">= 6.13.4",
     "yarn": ">= 1.21.1"
   }

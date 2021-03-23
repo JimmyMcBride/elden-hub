@@ -4,14 +4,16 @@
   </div>
 </template>
 <script>
+// import { mapActions } from "vuex"
 // import { firebaseAuth } from "boot/firebase"
+
 export default {
   name: "App",
   created() {
     this.$q.dark.set(true)
   },
-  mounted() {
-    // console.log("current user:", firebaseAuth)
-  },
+  // methods: {
+  //   ...mapActions("store", ["loadCurrentUser"]),
+  // },
 }
 </script>

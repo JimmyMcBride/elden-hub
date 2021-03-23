@@ -1,0 +1,17 @@
+{
+  "projectName": "eldenhub",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "none",
+    "config": {
+      "SourceDir": "src",
+      "DistributionDir": "dist/ssr",
+      "BuildCommand": "yarn build",
+      "StartCommand": "yarn start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

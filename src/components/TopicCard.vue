@@ -1,27 +1,30 @@
 <template>
-  <q-card flat bordered class="my-card" style="width: 30rem; max-width: 90vw">
-    <q-card-section>
-      <div class="text-h6">{{ title }}</div>
-    </q-card-section>
+  <router-link :to="'/topics/' + id">
+    <q-card flat bordered class="my-card" style="width: 30rem; max-width: 90vw">
+      <q-card-section>
+        <div class="text-h6">{{ topic.title }}</div>
+      </q-card-section>
 
-    <q-card-section class="q-pt-none">
-      {{ description }}
-    </q-card-section>
-  </q-card>
+      <q-separator inset></q-separator>
+
+      <q-card-section>
+        {{ topic.description }}
+      </q-card-section>
+    </q-card>
+  </router-link>
 </template>
 
 <script>
 export default {
   name: "TopicCard",
   props: {
-    title: {
-      type: String,
+    topic: {
+      type: Object,
       required: true,
     },
-
-    description: {
+    id: {
       type: String,
-      default: "",
+      required: true,
     },
   },
 }
